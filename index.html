@@ -32,6 +32,7 @@
       .row.content {height: auto;} 
     }
   </style>
+</head>
 <body>
 
 <div class="container-fluid">
@@ -39,7 +40,7 @@
     <div class="col-sm-3 sidenav">
       <h4>Cloud Computing Applications</h4>
       <ul id="sectionList" class="nav nav-pills nav-stacked">
-        <li><a  class="active" href="javascript:void(0)" onclick="changeContent('Introduction', this)">Introduction</a></li>
+        <li><a class="active" href="javascript:void(0)" onclick="changeContent('Introduction', this)">Introduction</a></li>
         <li><a href="javascript:void(0)" onclick="changeContent('Architecture', this)">Architecture</a></li>
         <li><a href="javascript:void(0)" onclick="changeContent('Team', this)">Team</a></li>
       </ul><br>
@@ -47,15 +48,21 @@
 
     <div class="col-sm-9" id="dynamicContent">
       <!-- Initial content goes here -->
-      <h3><small>RECENT POSTS</small></h3>
+      <h3><small>Introduction</small></h3>
       <hr>
-      <h2>I Love Food</h2>
-      <!-- Rest of the initial content -->
+      <h3><small>Coursework Description</small></h3>
+      <p>This is the introduction content...</p>
     </div>
   </div>
 </div>
 
 <script>
+  // Set Introduction as default active link and load its content
+  document.addEventListener('DOMContentLoaded', function() {
+    var defaultLink = document.querySelector('#sectionList li.active a');
+    changeContent('Introduction', defaultLink);
+  });
+
   function changeContent(section, clickedLink) {
     var dynamicContent = document.getElementById('dynamicContent');
     
@@ -104,9 +111,10 @@
     }
   }
 </script>
+
 <footer class="container-fluid" align="center">
   <p>Team5-2023</p>
-</footer>  
+</footer>
 
 </body>
 </html>

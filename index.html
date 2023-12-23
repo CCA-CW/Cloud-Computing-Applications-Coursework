@@ -59,7 +59,7 @@
 <script>
   // Set Introduction as default active link and load its content
   document.addEventListener('DOMContentLoaded', function() {
-    var defaultLink = document.querySelector('#sectionList li.active a');
+    var defaultLink = document.querySelector('#sectionList li a.active');
     changeContent('Introduction', defaultLink);
   });
 
@@ -86,35 +86,4 @@
       return `
         <h3><small>Introduction</small></h3>
         <hr>
-        <h3><small>Coursework Description</small></h3>
-        <p>This is the introduction content...</p>
-      `;
-    } else if (section === 'Architecture') {
-      return `
-        <h3><small>Architecture</small></h3>
-        <hr>
-        <p>This is the architecture content...</p>
-      `;
-    } else if (section === 'Team') {
-      return `
-        <h3><small>Team</small></h3>
-        <hr>
-        <p>This is the team content...</p>
-      `;
-    } else {
-      // Default content if section is not recognized
-      return `
-        <h3><small>Unknown Section</small></h3>
-        <hr>
-        <p>This section does not exist...</p>
-      `;
-    }
-  }
-</script>
-
-<footer class="container-fluid" align="center">
-  <p>Team5-2023</p>
-</footer>
-
-</body>
-</html>
+        <h3><small>Coursework Description<

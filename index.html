@@ -38,23 +38,23 @@
 
     <div class="col-sm-9" id="dynamicContent">
       <!-- Initial content goes here -->
-      <h3><small>Introduction</small></h3>
+      <h2><small>Introduction</small></h2>
       <hr>
-      <h3><small>Coursework Description</small></h3>
+      <h2><small>Coursework Description</small></h2>
       <p>In the rapidly evolving landscape of web development and cloud computing, the demand for scalable, secure, and efficiently deployable solutions has become paramount. This coursework embarks on the journey of designing and implementing a static website, leveraging the power of Infrastructure as a Service (IaaS) for storing binary files and images.</p>
-      <h4><small>Project Scope</small></h4>
+      <h3><small>Project Scope</small></h3>
       <p>The cornerstone of this project is to craft a website exclusively composed of static files and images. This deliberate choice is driven by the pursuit of seamless scalability and simplified deployment processes. Our strategy involves the utilization of the widely acclaimed Infrastructure as a Service (IaaS) solution — Amazon Simple Storage Service (S3) provided by Amazon Web Services (AWS).</p>
-      <h4><small>Continuous Integration and Deployment (CI/CD)</small></h4>
+      <h3><small>Continuous Integration and Deployment (CI/CD)</small></h3>
       <p>A pivotal aspect of contemporary web development, this coursework fully embraces the paradigm of Continuous Integration and Continuous Deployment (CI/CD). Our solution achieves this by seamlessly integrating AWS CodeBuild with GitHub, establishing an automated CI/CD pipeline.</p>
       <p>AWS CodeBuild serves as the cornerstone of our CI/CD process. This fully managed build service compiles source code, runs tests, and produces deployable artifacts. By harnessing the power of AWS CodeBuild, we automate the build and test phases of our development lifecycle, ensuring that the website-related files are prepared for deployment with precision and efficiency.</p>
       <p>Our CI/CD pipeline is intricately linked with the version control and collaboration capabilities of GitHub. Commits and pull requests trigger automated builds, creating a streamlined workflow that enhances collaboration among development teams. This integration ensures that changes are systematically validated before deployment, fostering a robust and reliable development lifecycle.</p>
       <p>The automated CI/CD pipeline facilitates the seamless deployment of website-related files. With each code change or update pushed to the GitHub repository, AWS CodeBuild initiates the necessary processes to ensure efficiency, reliability, and consistency. This not only accelerates the deployment cycle but also enhances the overall development experience.</p>
       <p>Our commitment to the CI/CD paradigm reflects our dedication to efficiency, reliability, and consistency throughout the development lifecycle. Automated testing, artifact generation, and deployment processes contribute to a development environment where changes are systematically validated and deployed, mitigating risks and ensuring the delivery of high-quality web content. By integrating AWS CodeBuild with GitHub, our CI/CD pipeline becomes a powerful enabler of continuous integration and continuous deployment, aligning with best practices in modern web development.</p>
-      <h4><small>Content Delivery Optimization</small></h4>
+      <h3><small>Content Delivery Optimization</small></h3>
       <p>Understanding the pivotal role of user experience in the success of web applications, our solution strategically leverages AWS CloudFront for content delivery optimization. AWS CloudFront serves as our Content Delivery Network (CDN), efficiently distributing static assets across a network of geographically dispersed servers.</p>
       <p>By harnessing the power of AWS CloudFront, we aim to significantly reduce latency and expedite the delivery of static files to end-users. This intelligent content delivery network caches content at edge locations, ensuring that users around the world experience enhanced performance and minimal load times.</p>
       <p>AWS CloudFront becomes an integral part of our solution, providing a scalable and secure approach to delivering web content. This optimization aligns with industry best practices, ensuring that our static website not only meets but exceeds user expectations in terms of speed and responsiveness.</p>
-      <h4><small>Cloud Deployment Automation</small></h4>
+      <h3><small>Cloud Deployment Automation</small></h3>
       <p>The deployment of our solution is orchestrated using cloud deployment automation tools, specifically AWS CloudFormation. This enables us to define and provision the required infrastructure in a programmatic manner, fostering repeatability, scalability, and version control.</p>
     </div>
   </div>
@@ -88,29 +88,29 @@
     // You can define different content for each section here
     if (section === 'Introduction') {
       return `
-        <h3><small>Introduction</small></h3>
+      <h2><small>Introduction</small></h2>
       <hr>
-      <h3><small>Coursework Description</small></h3>
+      <h2><small>Coursework Description</small></h2>
       <p>In the rapidly evolving landscape of web development and cloud computing, the demand for scalable, secure, and efficiently deployable solutions has become paramount. This coursework embarks on the journey of designing and implementing a static website, leveraging the power of Infrastructure as a Service (IaaS) for storing binary files and images.</p>
-      <h4><small>Project Scope</small></h4>
+      <h3><small>Project Scope</small></h3>
       <p>The cornerstone of this project is to craft a website exclusively composed of static files and images. This deliberate choice is driven by the pursuit of seamless scalability and simplified deployment processes. Our strategy involves the utilization of the widely acclaimed Infrastructure as a Service (IaaS) solution — Amazon Simple Storage Service (S3) provided by Amazon Web Services (AWS).</p>
-      <h4><small>Continuous Integration and Deployment (CI/CD)</small></h4>
+      <h3><small>Continuous Integration and Deployment (CI/CD)</small></h3>
       <p>A pivotal aspect of contemporary web development, this coursework fully embraces the paradigm of Continuous Integration and Continuous Deployment (CI/CD). Our solution achieves this by seamlessly integrating AWS CodeBuild with GitHub, establishing an automated CI/CD pipeline.</p>
       <p>AWS CodeBuild serves as the cornerstone of our CI/CD process. This fully managed build service compiles source code, runs tests, and produces deployable artifacts. By harnessing the power of AWS CodeBuild, we automate the build and test phases of our development lifecycle, ensuring that the website-related files are prepared for deployment with precision and efficiency.</p>
       <p>Our CI/CD pipeline is intricately linked with the version control and collaboration capabilities of GitHub. Commits and pull requests trigger automated builds, creating a streamlined workflow that enhances collaboration among development teams. This integration ensures that changes are systematically validated before deployment, fostering a robust and reliable development lifecycle.</p>
       <p>The automated CI/CD pipeline facilitates the seamless deployment of website-related files. With each code change or update pushed to the GitHub repository, AWS CodeBuild initiates the necessary processes to ensure efficiency, reliability, and consistency. This not only accelerates the deployment cycle but also enhances the overall development experience.</p>
       <p>Our commitment to the CI/CD paradigm reflects our dedication to efficiency, reliability, and consistency throughout the development lifecycle. Automated testing, artifact generation, and deployment processes contribute to a development environment where changes are systematically validated and deployed, mitigating risks and ensuring the delivery of high-quality web content. By integrating AWS CodeBuild with GitHub, our CI/CD pipeline becomes a powerful enabler of continuous integration and continuous deployment, aligning with best practices in modern web development.</p>
-      <h4><small>Content Delivery Optimization</small></h4>
+      <h3><small>Content Delivery Optimization</small></h3>
       <p>Understanding the pivotal role of user experience in the success of web applications, our solution strategically leverages AWS CloudFront for content delivery optimization. AWS CloudFront serves as our Content Delivery Network (CDN), efficiently distributing static assets across a network of geographically dispersed servers.</p>
       <p>By harnessing the power of AWS CloudFront, we aim to significantly reduce latency and expedite the delivery of static files to end-users. This intelligent content delivery network caches content at edge locations, ensuring that users around the world experience enhanced performance and minimal load times.</p>
       <p>AWS CloudFront becomes an integral part of our solution, providing a scalable and secure approach to delivering web content. This optimization aligns with industry best practices, ensuring that our static website not only meets but exceeds user expectations in terms of speed and responsiveness.</p>
-      <h4><small>Cloud Deployment Automation</small></h4>
+      <h3><small>Cloud Deployment Automation</small></h3>
       <p>The deployment of our solution is orchestrated using cloud deployment automation tools, specifically AWS CloudFormation. This enables us to define and provision the required infrastructure in a programmatic manner, fostering repeatability, scalability, and version control.</p>
 
       `;
     } else if (section === 'Architecture') {
       return `
-        <h3><small>Architecture</small></h3>
+        <h2><small>Architecture</small></h2>
         <hr>
         <div width="100%" align="center">
           <img src="images/S3-Static-Web_Architecture.png" width="650" alt="Architecture Diagram">
@@ -120,14 +120,14 @@
       `;
     } else if (section === 'Team') {
       return `
-        <h3><small>Team</small></h3>
+        <h2><small>Team</small></h2>
         <hr>
         <p>This is the team content...</p>
       `;
     } else {
       // Default content if section is not recognized
       return `
-        <h3><small>Unknown Section</small></h3>
+        <h2><small>Unknown Section</small></h2>
         <hr>
         <p>This section does not exist...</p>
       `;

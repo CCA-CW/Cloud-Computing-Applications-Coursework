@@ -39,4 +39,82 @@
   <div class="row content">
     <div class="col-sm-3 sidenav">
       <h4>Cloud Computing Applications</h4>
-      <ul id="sectionList" class="
+      <ul id="sectionList" class="nav nav-pills nav-stacked">
+        <li><a href="javascript:void(0)" onclick="changeContent('Introduction', this)">Introduction</a></li>
+        <li><a href="javascript:void(0)" onclick="changeContent('Architecture', this)">Architecture</a></li>
+        <li><a href="javascript:void(0)" onclick="changeContent('Team', this)">Team</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-9" id="dynamicContent">
+      <!-- Initial content goes here -->
+      <h3><small>Introduction</small></h3>
+      <hr>
+      <h3><small>Coursework Description</small></h3>
+      <p>This is the introduction content...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Set Introduction as default active link and load its content
+  document.addEventListener('DOMContentLoaded', function() {
+    var defaultLink = document.querySelector('#sectionList li.active a');
+    changeContent('Introduction', defaultLink);
+  });
+
+  function changeContent(section, clickedLink) {
+    var dynamicContent = document.getElementById('dynamicContent');
+    
+    // Reset active style for all links
+    var sectionList = document.getElementById('sectionList');
+    var links = sectionList.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].classList.remove('active');
+    }
+
+    // Set active style for the clicked link
+    clickedLink.classList.add('active');
+
+    // Update the content
+    dynamicContent.innerHTML = getUpdatedContent(section);
+  }
+
+  function getUpdatedContent(section) {
+    // You can define different content for each section here
+    if (section === 'Introduction') {
+      return `
+        <h3><small>Introduction</small></h3>
+        <hr>
+        <h3><small>Coursework Description</small></h3>
+        <p>This is the introduction content...</p>
+      `;
+    } else if (section === 'Architecture') {
+      return `
+        <h3><small>Architecture</small></h3>
+        <hr>
+        <p>This is the architecture content...</p>
+      `;
+    } else if (section === 'Team') {
+      return `
+        <h3><small>Team</small></h3>
+        <hr>
+        <p>This is the team content...</p>
+      `;
+    } else {
+      // Default content if section is not recognized
+      return `
+        <h3><small>Unknown Section</small></h3>
+        <hr>
+        <p>This section does not exist...</p>
+      `;
+    }
+  }
+</script>
+
+<footer class="container-fluid" align="center">
+  <p>Team5-2023</p>
+</footer>
+
+</body>
+</html>

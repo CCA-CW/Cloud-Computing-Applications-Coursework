@@ -132,11 +132,32 @@
         </div>
         <br/>
         <h3><small>Design</small></h3>
-        <p></p>
+        <p>This system has been designed to be implemented using AWS Cloudformation scripts. The templates were created for the following two aspects of this project.</p>
+        <ul>
+          <li>Infrastructure Creation</li>
+          <li>CI/CD Pipeline</li>
+        </ul>
         <h3><small>Infrastructure Script</small></h3>
-        <p></p>
+        <p>The actual implementation of the system infrastructure was handled through this script.</p>
+        <ul>
+          <li>Ste Stor:  This bucket will host the static website content. The pipeline will deploy its content to this bucket.</li>
+          <li>S3 Bucket Policy: Contains the permissions allowed for the Deployment Bucket.</li>
+          <li>Cloudfront Distribution: This is the Content Delivery Network mechanism provided by AWS.</li>
+        </ul>
         <h3><small>CI/CD Pipeline</small></h3>
-        <p></p>
+        <p>Since the web content needs to be uploaded to the Deployment bucket through a pipeline, a separate script was required to create the relevant pipeline infrastructure.</p>
+        <ul>
+          <li>Github Repository: This is considered as the source of the pipeline. Which contains the relevant web content.</li>
+          <li>Artifact Store: The pipeline will use this bucket to retrieve the final deployable content to be published to the Deployment Bucket.</li>
+          <li>Code Pipeline: This contains all the steps and configurations required to execute the pipeline.(Steps: Source, Deploy)</li>
+          <li>Code Pipeline Service Role: This is an IAM role that specifies the privileges allowed for the Codepipeline resource to execute the pipeline successfully.</li>
+        </ul>        
+        <h2><small>Deployment Diagram</small></h2>
+        <hr>
+        <div width="100%" align="center">
+          <img src="images/Deployment.png" width="950" alt="Architecture Diagram">
+        </div>
+        <br/>
       `;
     } else if (section === 'Team') {
       return `
